@@ -4,7 +4,12 @@ import { Colors } from "../../utils/Colors";
 import Title from "../../components/ui/Title";
 import Subtitle from "../../components/ui/Subtitle";
 import ActionButton from "../../components/ui/ActionButton";
-export default function StartScreen() {
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { StackRoutes } from "../../navigation/routes/StackRoutes";
+
+type NavigationProps = NativeStackScreenProps<StackRoutes, "Start">;
+
+export default function StartScreen({ navigation }: NavigationProps) {
     return (
         <View style={styles.rootContainer}>
             <ImageBackground
@@ -16,8 +21,8 @@ export default function StartScreen() {
                 <LinearGradient
                     style={styles.linearGradient}
                     colors={["transparent", Colors.gradientColor]}
-                    start={{x: 0, y: 0}}
-                    end={{x: 0, y: 0.8}}
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 0, y: 0.8 }}
                 >
                     <View style={styles.startContainer}>
                         <View style={styles.titleContainer}>
@@ -32,7 +37,14 @@ export default function StartScreen() {
                             </Subtitle>
                         </View>
                         <View style={styles.buttonContainer}>
-                            <ActionButton onPress={()=>{}} bold>Lets go!</ActionButton>
+                            <ActionButton
+                                onPress={() => {
+                                    navigation.navigate("Home");
+                                }}
+                                bold
+                            >
+                                Lets go!
+                            </ActionButton>
                         </View>
                     </View>
                 </LinearGradient>
@@ -64,5 +76,5 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         marginBottom: 42,
-    }
+    },
 });
