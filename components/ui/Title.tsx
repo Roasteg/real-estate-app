@@ -3,7 +3,7 @@ import { Colors } from "../../utils/Colors";
 
 type Props = {
     children: React.ReactNode;
-    size?: "xl" | "lg" | "md" | "sm";
+    size?: "xl" | "lg" | "md" | "sm" | "xs";
     color?: string;
     bold?: boolean;
     align?: "auto" | "left" | "right" | "center" | "justify";
@@ -16,6 +16,7 @@ export default function Title(props: Props) {
         lg: 60,
         md: 48,
         sm: 42,
+        xs: 26,
     };
 
     const titleStyle: TextStyle = {
@@ -23,7 +24,7 @@ export default function Title(props: Props) {
         color: props.color ?? Colors.textDefault,
         fontWeight: props.bold ? "bold" : "400",
         textAlign: props.align,
-        textTransform: props.transform
+        textTransform: props.transform,
     };
 
     return (
@@ -33,6 +34,5 @@ export default function Title(props: Props) {
     );
 }
 const styles = StyleSheet.create({
-    rootContainer: {
-    },
+    rootContainer: {},
 });

@@ -21,7 +21,7 @@ export default function ActionButton(props: Props) {
             style={({pressed}) => [
                 styles.rootContainer,
                 {
-                    backgroundColor: props.color ?? Colors.actionButtonDefault,
+                    backgroundColor: props.color ?? Colors.primary500,
                     opacity: pressed ? 0.7 : 1,
                 },
             ]}

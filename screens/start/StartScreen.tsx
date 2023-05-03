@@ -6,8 +6,14 @@ import Subtitle from "../../components/ui/Subtitle";
 import ActionButton from "../../components/ui/ActionButton";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { StackRoutes } from "../../navigation/routes/StackRoutes";
+import { CompositeScreenProps } from "@react-navigation/native";
+import { DrawerScreenProps } from "@react-navigation/drawer";
+import { DrawerRoutes } from "../../navigation/routes/DrawerRoutes";
 
-type NavigationProps = NativeStackScreenProps<StackRoutes, "Start">;
+type NavigationProps = CompositeScreenProps<
+    NativeStackScreenProps<StackRoutes, "Start">,
+    DrawerScreenProps<DrawerRoutes>
+>;
 
 export default function StartScreen({ navigation }: NavigationProps) {
     return (
@@ -39,7 +45,9 @@ export default function StartScreen({ navigation }: NavigationProps) {
                         <View style={styles.buttonContainer}>
                             <ActionButton
                                 onPress={() => {
-                                    navigation.navigate("Home");
+                                    navigation.navigate("Main", {
+                                        screen: "Home",
+                                    });
                                 }}
                                 bold
                             >

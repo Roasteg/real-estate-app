@@ -1,6 +1,8 @@
-export const Colors = { 
+export const Colors = {
     gradientColor: "#040f37",
-    actionButtonDefault: "#2f59ea",
+    primary500: "#2f59ea",
     textDefault: "#ffffff",
     subtitleDefault: "#b7b8c1",
-}
+    grey500: "#cccccc",
+    grey600: "#f3f3f3",
+};
