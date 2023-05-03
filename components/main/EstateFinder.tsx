@@ -13,7 +13,7 @@ import { useState } from "react";
 import ActionButton from "../ui/ActionButton";
 import { Action } from "../../types/Action";
 import { EstateType } from "../../types/EstateType";
-import Switch from "../ui/Switch";
+import ButtonSwitch from "../ui/ButtonSwitch";
 export default function EstateFinder() {
     const [selectedAction, setSelectedAction] = useState<Action>(
         "rent"
@@ -66,7 +66,7 @@ export default function EstateFinder() {
                     <Text>Location</Text>
                 </View>
                 <View style={styles.estateTypeContainer}>
-                    <Switch items={["Apartment", "House"]} />
+                    <ButtonSwitch items={["Apartment", "House"]} />
                 </View>
             </View>
 
@@ -106,7 +106,6 @@ const styles = StyleSheet.create({
     locationAndTypeContainer:{ 
     },
     estateTypeContainer: {
-        backgroundColor: Colors.grey600,
         flexDirection: "row",
     },
 });
