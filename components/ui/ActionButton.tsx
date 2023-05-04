@@ -1,4 +1,4 @@
-import { StyleSheet, Text, Pressable, View, TextStyle, ViewStyle } from "react-native";
+import { StyleSheet, Text, Pressable, View, TextStyle } from "react-native";
 import { Colors } from "../../utils/Colors";
 
 type Props = {
@@ -6,7 +6,6 @@ type Props = {
     onPress: () => void;
     bold?: boolean;
     color?: string;
-    style?: ViewStyle | ViewStyle[];
 };
 
 export default function ActionButton(props: Props) {
@@ -21,7 +20,6 @@ export default function ActionButton(props: Props) {
         onPress={props.onPress}
             style={({pressed}) => [
                 styles.rootContainer,
-                props.style,
                 {
                     backgroundColor: props.color ?? Colors.primary500,
                     opacity: pressed ? 0.7 : 1,
@@ -34,6 +32,7 @@ export default function ActionButton(props: Props) {
 }
 const styles = StyleSheet.create({
     rootContainer: {
+        padding: 24,
         borderRadius: 8,
         justifyContent: "center",
         alignItems: "center",
