@@ -6,6 +6,7 @@ type Props = {
     color?: string;
     size?: "xl" | "lg" | "md" | "sm";
     bold?: boolean;
+    semibold?: boolean;
     align?: "auto" | "left" | "right" | "center" | "justify";
     transform?: "none" | "capitalize" | "uppercase" | "lowercase";
 }
@@ -22,7 +23,7 @@ export default function Subtitle(props: Props) {
     const subtitleStyle: TextStyle = {
         fontSize: fontSizes[props.size ?? "md"],
         color: props.color ?? Colors.subtitleDefault,
-        fontWeight: props.bold ? "bold" : "400",
+        fontWeight: props.bold ? "bold" : props.semibold ? "500" : "400",
         textAlign: props.align,
         textTransform: props.transform
     }

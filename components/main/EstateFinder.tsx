@@ -5,6 +5,7 @@ import {
     TextStyle,
     View,
     ViewStyle,
+    TextInput,
 } from "react-native";
 
 import { Colors } from "../../utils/Colors";
@@ -14,11 +15,12 @@ import ActionButton from "../ui/ActionButton";
 import { Action } from "../../types/Action";
 import { EstateType } from "../../types/EstateType";
 import ButtonSwitch from "../ui/ButtonSwitch";
+import { Ionicons } from "@expo/vector-icons";
+
 export default function EstateFinder() {
-    const [selectedAction, setSelectedAction] = useState<Action>(
-        "rent"
-    );
-    const [selectedEstateType, setSelectedEstateType] = useState<EstateType>("apartment");
+    const [selectedAction, setSelectedAction] = useState<Action>("rent");
+    const [selectedEstateType, setSelectedEstateType] =
+        useState<EstateType>("apartment");
 
     const activeButtonStyle: ViewStyle = {
         borderBottomColor: Colors.primary500,
@@ -62,8 +64,9 @@ export default function EstateFinder() {
                 </LinkButton>
             </View>
             <View style={styles.locationAndTypeContainer}>
-                <View>
-                    <Text>Location</Text>
+                <View style={styles.locationContainer}>
+                    <Ionicons style={styles.locationPin} name="location" color={"red"} size={24} />
+                    <TextInput style={styles.locationInput} editable={false} value="Tallinn" />
                 </View>
                 <View style={styles.estateTypeContainer}>
                     <ButtonSwitch items={["Apartment", "House"]} />
@@ -79,7 +82,7 @@ export default function EstateFinder() {
 const styles = StyleSheet.create({
     rootContainer: {
         backgroundColor: "white",
-        height: 260,
+        height: "100%",
         padding: 12,
         borderRadius: 10,
         elevation: 4,
@@ -103,7 +106,20 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "500",
     },
-    locationAndTypeContainer:{ 
+    locationAndTypeContainer: {},
+    locationContainer: {
+        backgroundColor: Colors.grey600,
+        flexDirection: "row",
+        marginBottom: 18,
+        alignItems: "center",
+        borderRadius: 10,
+    },
+    locationInput: {
+        paddingVertical: 18,
+        width: "100%",
+    },
+    locationPin: {
+        marginHorizontal: 8
     },
     estateTypeContainer: {
         flexDirection: "row",

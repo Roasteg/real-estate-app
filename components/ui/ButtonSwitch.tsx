@@ -5,6 +5,7 @@ import { Colors } from "../../utils/Colors";
 type Props = {
     items: string[];
     activeColor?: string;
+    onChange?:(item: string) => void;
 };
 
 export default function ButtonSwitch(props: Props) {
@@ -15,12 +16,14 @@ export default function ButtonSwitch(props: Props) {
             {props.items.map((item) => {
                 return (
                     <Pressable
+                        key={item}
                         style={[
                             styles.switchItem,
                             active === item ? styles.activeItem : {},
                         ]}
                         onPress={() => {
                             setActive(item);
+                            props.onChange && props.onChange(item);
                         }}
                     >
                         <Text style={styles.itemText}>{item}</Text>
@@ -33,7 +36,7 @@ export default function ButtonSwitch(props: Props) {
 const styles = StyleSheet.create({
     rootContainer: {
         borderRadius: 12,
-        padding: 3,
+        padding: 6,
         backgroundColor: Colors.grey600,
         flex: 1,
         height: 60,
