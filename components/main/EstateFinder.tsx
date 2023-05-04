@@ -72,9 +72,8 @@ export default function EstateFinder() {
                     <ButtonSwitch items={["Apartment", "House"]} />
                 </View>
             </View>
-
             <View>
-                <ActionButton onPress={() => {}}>Find</ActionButton>
+                <ActionButton style={{height: 55}} onPress={() => {}}>Find</ActionButton>
             </View>
         </View>
     );
@@ -82,7 +81,6 @@ export default function EstateFinder() {
 const styles = StyleSheet.create({
     rootContainer: {
         backgroundColor: "white",
-        height: "100%",
         padding: 12,
         borderRadius: 10,
         elevation: 4,
@@ -106,7 +104,9 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "500",
     },
-    locationAndTypeContainer: {},
+    locationAndTypeContainer: {
+        marginVertical: 12,
+    },
     locationContainer: {
         backgroundColor: Colors.grey600,
         flexDirection: "row",

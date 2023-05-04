@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import Title from "../../components/ui/Title";
 import EstateFinder from "../../components/main/EstateFinder";
 import Subtitle from "../../components/ui/Subtitle";
@@ -37,14 +37,14 @@ export default function HomeScreen() {
                         </LinkButton>
                     </View>
                 </View>
-                <View style={styles.popularEstatesListContainer}>
+                <SafeAreaView style={styles.popularEstatesListContainer}>
                     <View style={[styles.popularEstateContainer, {marginRight: 6}]}>
                         <Card />
                     </View>
                     <View style={styles.popularEstateContainer}>
                         <Card />
                     </View>
-                </View>
+                </SafeAreaView>
             </View>
         </View>
     );
@@ -56,11 +56,10 @@ const styles = StyleSheet.create({
     },
     titleContainer: {
         flex: 1,
-        marginBottom: 12,
     },
     estateFinderContainer: {
-        flex: 4,
-        marginBottom: 28,
+        flex: 3,
+        marginBottom: 36,
     },
     popularEstatesContainer: {
         flex: 4,
@@ -69,11 +68,10 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginBottom: 18,
+        marginBottom: 12
     },
     popularEstatesListContainer: {
         flex: 1,
-        marginBottom: 8,
         flexDirection: "row",
         justifyContent: "space-between"
     },

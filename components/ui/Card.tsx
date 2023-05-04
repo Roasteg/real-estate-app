@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
     infoContainer: {
         flex: 3,
         padding: 8,
+        justifyContent: "space-between"
     },
     estateNameContainer: {
         marginBottom: 4,

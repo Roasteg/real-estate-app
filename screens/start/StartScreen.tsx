@@ -44,6 +44,7 @@ export default function StartScreen({ navigation }: NavigationProps) {
                         </View>
                         <View style={styles.buttonContainer}>
                             <ActionButton
+                            style={{height: 60}}
                                 onPress={() => {
                                     navigation.navigate("Main", {
                                         screen: "Home",
