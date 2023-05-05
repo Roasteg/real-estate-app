@@ -1,5 +1,5 @@
 import { StyleSheet, Text, Pressable, View, TextStyle } from "react-native";
-import { Colors } from "../../utils/Colors";
+import { Colors } from "../../../utils/Colors";
 
 type Props = {
     children: React.ReactNode;

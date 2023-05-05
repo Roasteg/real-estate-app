@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
-import Title from "../../components/ui/Title";
-import EstateFinder from "../../components/main/EstateFinder";
-import Subtitle from "../../components/ui/Subtitle";
-import LinkButton from "../../components/ui/LinkButton";
 import { Colors } from "../../utils/Colors";
-import { Ionicons } from "@expo/vector-icons";
-import Card from "../../components/ui/Card";
-import PopularEstates from "../../components/main/PopularEstates";
+import LinkButton from "../atoms/buttons/LinkButton";
+import Subtitle from "../atoms/typography/Subtitle";
+import Title from "../atoms/typography/Title";
+import Card from "../organisms/Card";
+import EstateFinder from "../organisms/EstateFinder";
 
-export default function HomeScreen() {
+type Props = {};
+
+export default function HomeTemplate() {
     return (
         <View style={styles.rootContainer}>
             <View style={styles.titleContainer}>
@@ -38,7 +38,12 @@ export default function HomeScreen() {
                     </View>
                 </View>
                 <View style={styles.popularEstatesListContainer}>
-                    <View style={[styles.popularEstateContainer, {marginRight: 6}]}>
+                    <View
+                        style={[
+                            styles.popularEstateContainer,
+                            { marginRight: 6 },
+                        ]}
+                    >
                         <Card />
                     </View>
                     <View style={styles.popularEstateContainer}>
@@ -75,9 +80,9 @@ const styles = StyleSheet.create({
         flex: 1,
         marginBottom: 8,
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
     },
     popularEstateContainer: {
         flex: 1,
-    }
+    },
 });

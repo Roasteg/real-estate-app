@@ -1,21 +1,19 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import { Colors } from "../../utils/Colors";
-import Title from "../../components/ui/Title";
-import Subtitle from "../../components/ui/Subtitle";
-import ActionButton from "../../components/ui/ActionButton";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { StackRoutes } from "../../navigation/routes/StackRoutes";
-import { CompositeScreenProps } from "@react-navigation/native";
+import ActionButton from "../atoms/buttons/ActionButton";
+import Subtitle from "../atoms/typography/Subtitle";
+import Title from "../atoms/typography/Title";
 import { DrawerScreenProps } from "@react-navigation/drawer";
+import { CompositeScreenProps } from "@react-navigation/native";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { DrawerRoutes } from "../../navigation/routes/DrawerRoutes";
-
+import { StackRoutes } from "../../navigation/routes/StackRoutes";
 type NavigationProps = CompositeScreenProps<
     NativeStackScreenProps<StackRoutes, "Start">,
     DrawerScreenProps<DrawerRoutes>
 >;
-
-export default function StartScreen({ navigation }: NavigationProps) {
+export default function StartPage({ navigation }: NavigationProps) {
     return (
         <View style={styles.rootContainer}>
             <ImageBackground

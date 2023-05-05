@@ -2,8 +2,8 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { DrawerRoutes } from "./routes/DrawerRoutes";
-import HomeScreen from "../screens/main/HomeScreen";
-import AppBar from "../components/AppBar";
+import AppBar from "../components/organisms/AppBar";
+import HomePage from "../components/pages/HomePage";
 
 const Drawer = createDrawerNavigator<DrawerRoutes>();
 
@@ -15,7 +15,7 @@ export default function DrawerNavigation() {
                 header: () => <AppBar />,
             }}
         >
-            <Drawer.Screen name="Home" component={HomeScreen} />
+            <Drawer.Screen name="Home" component={HomePage} />
         </Drawer.Navigator>
     );
 }

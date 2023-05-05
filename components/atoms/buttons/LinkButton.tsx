@@ -6,7 +6,7 @@ import {
     View,
     ViewStyle,
 } from "react-native";
-import { Colors } from "../../utils/Colors";
+import { Colors } from "../../../utils/Colors";
 import { Ionicons } from "@expo/vector-icons";
 type Props = {
     children: React.ReactNode;
@@ -24,8 +24,8 @@ export default function LinkButton(props: Props) {
     const sizes = {
         lg: 18,
         md: 16,
-        sm: 12
-    }
+        sm: 12,
+    };
 
     return (
         <Pressable
@@ -33,9 +33,21 @@ export default function LinkButton(props: Props) {
             style={[styles.tabButtonContainer, props.style]}
         >
             <View style={styles.textAndIconContainer}>
-                {props.iconLeft && <Ionicons size={sizes[props.size ?? "md"]} style={props.iconLeftStyle} name={props.iconLeft} />}
+                {props.iconLeft && (
+                    <Ionicons
+                        size={sizes[props.size ?? "md"]}
+                        style={props.iconLeftStyle}
+                        name={props.iconLeft}
+                    />
+                )}
                 <Text style={[props.textStyle]}>{props.children}</Text>
-                {props.iconRight && <Ionicons size={sizes[props.size ?? "md"]} style={props.iconRightStyle} name={props.iconRight} />}
+                {props.iconRight && (
+                    <Ionicons
+                        size={sizes[props.size ?? "md"]}
+                        style={props.iconRightStyle}
+                        name={props.iconRight}
+                    />
+                )}
             </View>
         </Pressable>
     );

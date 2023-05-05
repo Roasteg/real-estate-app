@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, FlatList } from 'react-native'
-import Card from '../ui/Card'
+import Card from '../organisms/Card'
 export default function PopularEstates() {
   return (
     <View style={styles.rootContainer}>

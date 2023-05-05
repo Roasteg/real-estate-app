@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { Colors } from "../../utils/Colors";
+import { Colors } from "../../../utils/Colors";
 
 type Props = {
     items: string[];
@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         padding: 6,
         backgroundColor: Colors.grey600,
-        flex: 1,
         height: 60,
         flexDirection: "row",
     },

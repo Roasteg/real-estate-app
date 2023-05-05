@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image } from "react-native";
-import Badge from "./Badge";
-import Subtitle from "./Subtitle";
+import Badge from "../atoms/typography/Badge";
+import Subtitle from "../atoms/typography/Subtitle";
 import { Ionicons } from "@expo/vector-icons";
 export default function Card() {
     return (
