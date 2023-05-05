@@ -1,8 +1,6 @@
-import { StyleSheet, Text, TextStyle, View, ViewStyle } from "react-native";
+import { StyleSheet, TextStyle, View, ViewStyle } from "react-native";
 import LinkButton from "../atoms/buttons/LinkButton";
-import { useState } from "react";
-import { Action } from "../../types/Action";
-import { Colors } from "../../utils/Colors";
+import Colors from "../../utils/Colors";
 
 type Props = {
     segments: string[];

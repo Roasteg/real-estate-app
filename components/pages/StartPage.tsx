@@ -1,6 +1,6 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
-import { Colors } from "../../utils/Colors";
+import Colors from "../../utils/Colors";
 import ActionButton from "../atoms/buttons/ActionButton";
 import Subtitle from "../atoms/typography/Subtitle";
 import Title from "../atoms/typography/Title";

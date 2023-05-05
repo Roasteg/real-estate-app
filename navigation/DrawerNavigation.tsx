@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { DrawerRoutes } from "./routes/DrawerRoutes";

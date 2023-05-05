@@ -1,4 +1,4 @@
-export const Colors = {
+const Colors = {
     gradientColor: "#040f37",
     primary300: "#ecf5fd",
     primary500: "#2f59ea",
@@ -11,3 +11,5 @@ export const Colors = {
     green300: "#e7ffee",
     green500: "#22ad4b"
 };
+
+export default Colors;

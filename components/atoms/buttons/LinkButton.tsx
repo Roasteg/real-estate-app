@@ -6,7 +6,6 @@ import {
     View,
     ViewStyle,
 } from "react-native";
-import { Colors } from "../../../utils/Colors";
 import { Ionicons } from "@expo/vector-icons";
 type Props = {
     children: React.ReactNode;

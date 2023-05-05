@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TextStyle, View, ViewStyle } from "react-native";
-import { Colors } from "../../../utils/Colors";
+import Colors from "../../../utils/Colors";
 import { BadgeType } from "../../../types/Badge";
 
 type Props = {

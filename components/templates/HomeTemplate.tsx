@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
-import { Colors } from "../../utils/Colors";
+import { StyleSheet, View } from "react-native";
+import Colors from "../../utils/Colors";
 import LinkButton from "../atoms/buttons/LinkButton";
 import Subtitle from "../atoms/typography/Subtitle";
 import Title from "../atoms/typography/Title";

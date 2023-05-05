@@ -1,21 +1,12 @@
 import {
-    Pressable,
     StyleSheet,
-    Text,
-    TextStyle,
     View,
-    ViewStyle,
-    TextInput,
 } from "react-native";
 
-import { Colors } from "../../utils/Colors";
-import LinkButton from "../atoms/buttons/LinkButton";
 import { useState } from "react";
 import ActionButton from "../atoms/buttons/ActionButton";
-import { Action } from "../../types/Action";
 import { EstateType } from "../../types/EstateType";
 import ButtonSwitch from "../atoms/buttons/ButtonSwitch";
-import { Ionicons } from "@expo/vector-icons";
 import SegmentedButtons from "../molecules/SegmentedButtons";
 import IconInput from "../atoms/inputs/IconInput";
 
