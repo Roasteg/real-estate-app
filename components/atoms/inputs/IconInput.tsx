@@ -25,7 +25,7 @@ export default function IconInput(props: Props) {
             style={[
                 styles.rootContainer,
                 props.style,
-                { backgroundColor: props.backgroundColor ?? Colors.grey600 },
+                { backgroundColor: props.backgroundColor ?? Colors.grey300 },
             ]}
         >
             <Ionicons

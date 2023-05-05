@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     rootContainer: {
         borderRadius: 12,
         padding: 6,
-        backgroundColor: Colors.grey600,
+        backgroundColor: Colors.grey300,
         height: 60,
         flexDirection: "row",
     },

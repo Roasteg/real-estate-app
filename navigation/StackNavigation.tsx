@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StackRoutes } from "./routes/StackRoutes";
 import DrawerNavigation from "./DrawerNavigation";
 import StartPage from "../components/pages/StartPage";
+import EstateOverviewPage from "../components/pages/EstateOverviewPage";
 
 const Stack = createNativeStackNavigator<StackRoutes>();
 
@@ -10,6 +11,7 @@ export default function StackNavigation() {
     return (
         <Stack.Navigator
             screenOptions={{ headerShown: false, gestureEnabled: true }}
+            initialRouteName="Overview"
         >
             <Stack.Screen name="Start" component={StartPage} />
             <Stack.Screen
@@ -18,6 +20,11 @@ export default function StackNavigation() {
                 options={{
                     gestureEnabled: false,
                 }}
+            />
+            <Stack.Screen
+                name="Overview"
+                component={EstateOverviewPage}
+                options={{ contentStyle: { backgroundColor: "white" } }}
             />
         </Stack.Navigator>
     );

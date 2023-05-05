@@ -1,9 +1,9 @@
 import { StyleSheet, Text, TextStyle, View, ViewStyle } from "react-native";
-import Colors from "../../../utils/Colors";
 import { BadgeType } from "../../../types/Badge";
-
+import { Ionicons } from "@expo/vector-icons";
+import Colors from "../../../utils/Colors";
 type Props = {
-    children: React.ReactNode;
+    icon: keyof typeof Ionicons.glyphMap;
     type?: BadgeType;
     size?: "lg" | "md" | "sm";
 };
@@ -13,26 +13,26 @@ type StyleObject = { [key: string]: { [key: string]: ViewStyle | TextStyle } };
 const sizes: StyleObject = {
     lg: {
         badgeStyle: {
-            padding: 18,
+            padding: 12,
         },
-        textStyle: {
-            fontSize: 20,
+        iconStyle: {
+            fontSize: 26,
         },
     },
     md: {
         badgeStyle: {
-            padding: 14,
+            padding: 10,
         },
-        textStyle: {
-            fontSize: 16,
+        iconStyle: {
+            fontSize: 22,
         },
     },
     sm: {
         badgeStyle: {
             padding: 8,
         },
-        textStyle: {
-            fontSize: 10,
+        iconStyle: {
+            fontSize: 14,
         },
     },
 };
@@ -42,7 +42,7 @@ const types: StyleObject = {
         badgeStyle: {
             backgroundColor: Colors.primary300,
         },
-        textStyle: {
+        iconStyle: {
             color: Colors.primary500,
         },
     },
@@ -50,7 +50,7 @@ const types: StyleObject = {
         badgeStyle: {
             backgroundColor: Colors.orange300,
         },
-        textStyle: {
+        iconStyle: {
             color: Colors.orange500,
         },
     },
@@ -58,13 +58,12 @@ const types: StyleObject = {
         badgeStyle: {
             backgroundColor: Colors.green300,
         },
-        textStyle: {
+        iconStyle: {
             color: Colors.green500,
         },
     },
 };
-
-export default function Badge(props: Props) {
+export default function IconBadge(props: Props) {
     return (
         <View
             style={[
@@ -73,15 +72,13 @@ export default function Badge(props: Props) {
                 sizes[props.size ?? "md"].badgeStyle,
             ]}
         >
-            <Text
+            <Ionicons
+                name={props.icon}
                 style={[
-                    styles.badgeText,
-                    types[props.type ?? "primary"].textStyle,
-                    sizes[props.size ?? "md"].textStyle,
+                    types[props.type ?? "primary"].iconStyle,
+                    sizes[props.size ?? "md"].iconStyle,
                 ]}
-            >
-                {props.children}
-            </Text>
+            />
         </View>
     );
 }
