@@ -43,9 +43,7 @@ export default function StartPage({ navigation }: NavigationProps) {
                         <View style={styles.buttonContainer}>
                             <ActionButton
                                 onPress={() => {
-                                    navigation.navigate("Main", {
-                                        screen: "Home",
-                                    });
+                                    navigation.navigate("Login");
                                 }}
                                 bold
                             >

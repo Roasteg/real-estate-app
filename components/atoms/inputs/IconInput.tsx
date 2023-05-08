@@ -17,6 +17,7 @@ type Props = {
     style?: ViewStyle;
     textStyle?: TextStyle;
     backgroundColor?: string;
+    hideText?: boolean;
 };
 
 export default function IconInput(props: Props) {
@@ -38,6 +39,7 @@ export default function IconInput(props: Props) {
                 style={[styles.input, props.textStyle]}
                 editable={props.editable}
                 value={props.value}
+                secureTextEntry={props.hideText}
             />
         </View>
     );

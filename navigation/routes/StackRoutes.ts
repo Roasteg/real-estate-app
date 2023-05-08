@@ -3,6 +3,7 @@ import { DrawerRoutes } from "./DrawerRoutes";
 
 export type StackRoutes = {
     Start: undefined;
+    Login: undefined;
     Main: NavigatorScreenParams<DrawerRoutes>;
     Overview: {estateId: number};
 }
