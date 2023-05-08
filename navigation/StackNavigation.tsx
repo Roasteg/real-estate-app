@@ -11,7 +11,6 @@ export default function StackNavigation() {
     return (
         <Stack.Navigator
             screenOptions={{ headerShown: false, gestureEnabled: true }}
-            initialRouteName="Overview"
         >
             <Stack.Screen name="Start" component={StartPage} />
             <Stack.Screen

@@ -19,10 +19,10 @@ export default function Card() {
             </View>
             <View style={styles.badgesContainer}>
                 <View style={styles.badgeContainer}>
-                    <Badge>Apartment</Badge>
+                    <Badge size="sm">Apartment</Badge>
                 </View>
                 <View style={styles.badgeContainer}>
-                    <Badge type="rent">Rent</Badge>
+                    <Badge type="rent" size="sm">Rent</Badge>
                 </View>
             </View>
             <View style={styles.infoContainer}>

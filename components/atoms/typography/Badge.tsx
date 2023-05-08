@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TextStyle, View, ViewStyle } from "react-native";
-import Colors from "../../../utils/Colors";
+import Colors from "../../../theme/Colors";
 import { BadgeType } from "../../../types/Badge";
+import Fonts from "../../../theme/Fonts";
 
 type Props = {
     children: React.ReactNode;
@@ -16,7 +17,7 @@ const sizes: StyleObject = {
             padding: 18,
         },
         textStyle: {
-            fontSize: 20,
+            fontSize: Fonts.size.font20,
         },
     },
     md: {
@@ -24,7 +25,7 @@ const sizes: StyleObject = {
             padding: 14,
         },
         textStyle: {
-            fontSize: 16,
+            fontSize: Fonts.size.font16,
         },
     },
     sm: {
@@ -32,7 +33,7 @@ const sizes: StyleObject = {
             padding: 8,
         },
         textStyle: {
-            fontSize: 10,
+            fontSize: Fonts.size.font10,
         },
     },
 };

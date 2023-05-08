@@ -1,5 +1,6 @@
-import { StyleSheet, Text, TextStyle, View } from 'react-native'
-import Colors from '../../../utils/Colors';
+import { StyleSheet, Text, TextStyle, View } from "react-native";
+import Colors from "../../../theme/Colors";
+import Fonts from "../../../theme/Fonts";
 
 type Props = {
     children: React.ReactNode;
@@ -9,30 +10,32 @@ type Props = {
     semibold?: boolean;
     align?: "auto" | "left" | "right" | "center" | "justify";
     transform?: "none" | "capitalize" | "uppercase" | "lowercase";
-}
+};
 
 export default function Subtitle(props: Props) {
-
     const fontSizes = {
-        xl: 24,
-        lg: 18,
-        md: 16,
-        sm: 14,
+        xl: Fonts.size.font24,
+        lg: Fonts.size.font18,
+        md: Fonts.size.font16,
+        sm: Fonts.size.font14,
     };
 
     const subtitleStyle: TextStyle = {
         fontSize: fontSizes[props.size ?? "md"],
         color: props.color ?? Colors.subtitleDefault,
-        fontWeight: props.bold ? "bold" : props.semibold ? "500" : "400",
+        fontWeight: props.bold
+            ? Fonts.weight.bold
+            : props.semibold
+            ? Fonts.weight.semibold
+            : Fonts.weight.normal,
         textAlign: props.align,
-        textTransform: props.transform
-    }
+        textTransform: props.transform,
+    };
 
-  return (
-    <View>
-      <Text style={subtitleStyle}>{props.children}</Text>
-    </View>
-  )
+    return (
+        <View>
+            <Text style={subtitleStyle}>{props.children}</Text>
+        </View>
+    );
 }
-const styles = StyleSheet.create({
-})
+const styles = StyleSheet.create({});

@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
-import Colors from "../../utils/Colors";
+import Colors from "../../theme/Colors";
 import IconButton from "../atoms/buttons/IconButton";
+import Fonts from "../../theme/Fonts";
 
 export default function EstateOwner() {
     return (
@@ -46,6 +47,6 @@ const styles = StyleSheet.create({
       marginLeft: 12,
     },
     ownerName: {
-      fontWeight: "500"
+      fontWeight: Fonts.weight.semibold
     }
 });

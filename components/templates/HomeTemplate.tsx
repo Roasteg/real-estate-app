@@ -1,14 +1,16 @@
-import { StyleSheet, View } from "react-native";
-import Colors from "../../utils/Colors";
+import { Pressable, StyleSheet, View } from "react-native";
+import Colors from "../../theme/Colors";
 import LinkButton from "../atoms/buttons/LinkButton";
 import Subtitle from "../atoms/typography/Subtitle";
 import Title from "../atoms/typography/Title";
 import Card from "../organisms/Card";
 import EstateFinder from "../organisms/EstateFinder";
 
-type Props = {};
+type Props = {
+    onPopularPress: () => void;
+};
 
-export default function HomeTemplate() {
+export default function HomeTemplate(props: Props) {
     return (
         <View style={styles.rootContainer}>
             <View style={styles.titleContainer}>
@@ -38,14 +40,15 @@ export default function HomeTemplate() {
                     </View>
                 </View>
                 <View style={styles.popularEstatesListContainer}>
-                    <View
+                    <Pressable
                         style={[
                             styles.popularEstateContainer,
                             { marginRight: 6 },
                         ]}
+                        onPress={props.onPopularPress}
                     >
                         <Card />
-                    </View>
+                    </Pressable>
                     <View style={styles.popularEstateContainer}>
                         <Card />
                     </View>

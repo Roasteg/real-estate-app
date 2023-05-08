@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import IconBadge from "../atoms/typography/IconBadge";
+import Fonts from "../../theme/Fonts";
 
 type Props = {
     icon?: keyof typeof Ionicons.glyphMap;
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     convenienceText: {
-        fontWeight: "300",
+        fontWeight: Fonts.weight.thin,
         marginLeft: 6,
     },
 });

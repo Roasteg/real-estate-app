@@ -3,7 +3,7 @@ import ImageCarousel from "../molecules/ImageCarousel";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import IconButton from "../atoms/buttons/IconButton";
-import Colors from "../../utils/Colors";
+import Colors from "../../theme/Colors";
 import Badge from "../atoms/typography/Badge";
 import Title from "../atoms/typography/Title";
 import Subtitle from "../atoms/typography/Subtitle";
@@ -11,12 +11,18 @@ import IconBadge from "../atoms/typography/IconBadge";
 import EstateOwner from "../molecules/EstateOwner";
 import ConvenienceItem from "../molecules/ConvenienceItem";
 import { LinearGradient } from "expo-linear-gradient";
-export default function EstateOverviewTemplate() {
+import Fonts from "../../theme/Fonts";
+
+type Props = {
+    onBackButtonPress: () => void;
+}
+
+export default function EstateOverviewTemplate(props: Props) {
     return (
         <View style={styles.rootContainer}>
             <SafeAreaView style={styles.backButtonContainer}>
                 <IconButton
-                    onPress={() => {}}
+                    onPress={props.onBackButtonPress}
                     icon="chevron-back"
                     color="white"
                     backgroundColor={Colors.black200}
@@ -149,8 +155,8 @@ const styles = StyleSheet.create({
         marginBottom: 24,
     },
     estateParameterText: {
-        fontSize: 16,
-        fontWeight: "500",
+        fontSize: Fonts.size.font16,
+        fontWeight: Fonts.weight.semibold,
         marginLeft: 8,
     },
     estateOwnerContainer: {

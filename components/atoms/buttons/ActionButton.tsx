@@ -1,5 +1,6 @@
 import { StyleSheet, Text, Pressable, TextStyle } from "react-native";
-import  Colors from "../../../utils/Colors";
+import  Colors from "../../../theme/Colors";
+import Fonts from "../../../theme/Fonts";
 
 type Props = {
     children: React.ReactNode;
@@ -10,8 +11,8 @@ type Props = {
 
 export default function ActionButton(props: Props) {
     const actionButtonTextStyle: TextStyle = {
-        fontSize: 16,
-        fontWeight: props.bold ? "bold" : "400",
+        fontSize: Fonts.size.font16,
+        fontWeight: props.bold ? Fonts.weight.bold : Fonts.weight.normal,
         color: Colors.textDefault,
         textTransform: "capitalize",
     };

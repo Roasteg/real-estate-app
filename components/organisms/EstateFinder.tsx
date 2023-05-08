@@ -1,7 +1,4 @@
-import {
-    StyleSheet,
-    View,
-} from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { useState } from "react";
 import ActionButton from "../atoms/buttons/ActionButton";
@@ -31,7 +28,7 @@ export default function EstateFinder() {
                     iconColor="red"
                     iconSize={24}
                     editable={false}
-                    style={{borderRadius: 10}}
+                    style={{ borderRadius: 10 }}
                     textStyle={{ paddingVertical: 18 }}
                     icon="location"
                     value="Tallinn"
@@ -59,9 +56,7 @@ const styles = StyleSheet.create({
         shadowRadius: 10,
         justifyContent: "space-between",
     },
-
     locationAndTypeContainer: {},
-
     estateTypeContainer: {
         flexDirection: "row",
     },

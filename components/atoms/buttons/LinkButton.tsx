@@ -7,6 +7,7 @@ import {
     ViewStyle,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import Fonts from "../../../theme/Fonts";
 type Props = {
     children: React.ReactNode;
     style?: ViewStyle | ViewStyle[];
@@ -21,9 +22,9 @@ type Props = {
 
 export default function LinkButton(props: Props) {
     const sizes = {
-        lg: 18,
-        md: 16,
-        sm: 12,
+        lg: Fonts.size.font18,
+        md: Fonts.size.font16,
+        sm: Fonts.size.font12,
     };
 
     return (

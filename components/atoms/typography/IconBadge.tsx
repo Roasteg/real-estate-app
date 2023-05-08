@@ -1,7 +1,8 @@
 import { StyleSheet, Text, TextStyle, View, ViewStyle } from "react-native";
 import { BadgeType } from "../../../types/Badge";
 import { Ionicons } from "@expo/vector-icons";
-import Colors from "../../../utils/Colors";
+import Colors from "../../../theme/Colors";
+import Fonts from "../../../theme/Fonts";
 type Props = {
     icon: keyof typeof Ionicons.glyphMap;
     type?: BadgeType;
@@ -16,7 +17,7 @@ const sizes: StyleObject = {
             padding: 12,
         },
         iconStyle: {
-            fontSize: 26,
+            fontSize: Fonts.size.font26,
         },
     },
     md: {
@@ -24,7 +25,7 @@ const sizes: StyleObject = {
             padding: 10,
         },
         iconStyle: {
-            fontSize: 22,
+            fontSize: Fonts.size.font22,
         },
     },
     sm: {
@@ -32,7 +33,7 @@ const sizes: StyleObject = {
             padding: 8,
         },
         iconStyle: {
-            fontSize: 14,
+            fontSize: Fonts.size.font14,
         },
     },
 };
@@ -87,6 +88,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     badgeText: {
-        fontWeight: "500",
+        fontWeight: Fonts.weight.semibold,
     },
 });

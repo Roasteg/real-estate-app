@@ -24,7 +24,7 @@ export default function AppBar() {
 }
 const styles = StyleSheet.create({
     rootContainer: {
-        paddingTop: 54,
+        paddingTop: 48,
         padding: 12,
         flexDirection: "row",
         alignItems: "center",

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import Colors from "../../../utils/Colors";
+import Colors from "../../../theme/Colors";
+import Fonts from "../../../theme/Fonts";
 
 type Props = {
     items: string[];
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     itemText: {
-        fontWeight: "500",
+        fontWeight: Fonts.weight.semibold,
     },
     activeItem: {
         backgroundColor: "#ffffff",

@@ -1,6 +1,7 @@
 import { StyleSheet, TextStyle, View, ViewStyle } from "react-native";
 import LinkButton from "../atoms/buttons/LinkButton";
-import Colors from "../../utils/Colors";
+import Colors from "../../theme/Colors";
+import Fonts from "../../theme/Fonts";
 
 type Props = {
     segments: string[];
@@ -8,7 +9,10 @@ type Props = {
     onSegmentPress: (segment: string) => void;
 };
 
-export default function SegmentedButtons(this: typeof SegmentedButtons, props: Props) {
+export default function SegmentedButtons(
+    this: typeof SegmentedButtons,
+    props: Props
+) {
     const activeButtonStyle: ViewStyle = {
         borderBottomColor: Colors.primary500,
     };
@@ -20,7 +24,7 @@ export default function SegmentedButtons(this: typeof SegmentedButtons, props: P
             {props.segments.map((segment) => {
                 return (
                     <LinkButton
-                    key={segment}
+                        key={segment}
                         style={[
                             styles.linkButton,
                             props.selected === segment ? activeButtonStyle : {},
@@ -52,7 +56,7 @@ const styles = StyleSheet.create({
     },
     linkButtonText: {
         color: Colors.grey500,
-        fontSize: 18,
-        fontWeight: "500",
+        fontSize: Fonts.size.font18,
+        fontWeight: Fonts.weight.semibold,
     },
 });

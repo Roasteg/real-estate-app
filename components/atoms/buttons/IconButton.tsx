@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View, ViewStyle } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import Colors from "../../../utils/Colors";
+import Colors from "../../../theme/Colors";
 
 type Props = {
     icon: keyof typeof Ionicons.glyphMap;
